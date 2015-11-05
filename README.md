@@ -24,7 +24,12 @@ ES6の基本文法の続きを学ぶ。
 
 * git clone
 * 開発環境準備(NPM, BABEL, gulp)
+* フロントエンドでES6を使ってみる
 * ES6の基本文法の続きを試してみる
+  * Promise
+  * Default Parameter
+  * Spread Parameter
+* ES5→ES6にリファクタリングしてみよう
 
 
 ### 持ち物
@@ -53,8 +58,6 @@ $ cd js_workshop_4
 ```
 
 ### フロントエンドでもES6を使ってみる(browserify, babelify)
-
-※時間がなかったので次回やります
 
 gulpfile.jsにて同じようにトランスパイルしても、importなどはrequireに変換されるため、フロントエンド(ブラウザ側)からは利用することが出来ない。
 
