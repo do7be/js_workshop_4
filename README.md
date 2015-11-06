@@ -43,6 +43,7 @@ ES6の基本文法の続きを学ぶ。
 
 ## workshop前の基本知識
 
+* ES6の基本文法に関しては[js workshop #3](https://github.com/do7be/js_workshop_3)を参照
 
 
 ## workshop本題
