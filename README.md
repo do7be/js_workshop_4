@@ -28,7 +28,6 @@ ES6の基本文法の続きを学ぶ。
 * ES6の基本文法の続きを試してみる
   * Default Parameter
   * Rest Parameter, Spread Operator
-  * Promise
 * ES5→ES6にリファクタリングしてみよう
 
 
@@ -180,4 +179,28 @@ console.log(hoge(...numbers)); // 6
 それでは、ES6で可変長引数の平均を計算するプログラムを作成してください。（Rest Parameter、Spread Operatorを使ってください）
 
 
-#### Promise
+### ES5→ES6にリファクタリングしてみよう
+
+では、今まで習得したES6(ES2015)の知識を用いて以下のES5のプログラムをES6にリファクタリングしましょう。Class化しても構いません。
+
+```javascript
+var Logger = {
+  count: 5,
+  sleepAndLog: function(logMessage, msec) {
+    var msec = typeof msec !== 'undefined' ?  msec : 0;
+
+    var self = this;
+
+    for (var i = 1; i <= this.count; i++) {
+      setTimeout(function() {
+        console.log(self.count + '回出力します：' + logMessage)
+      } , msec);
+    }
+  },
+}
+
+Logger.sleepAndLog('ろぎんぐなう！', 1000);
+
+Logger.count = 3;
+Logger.sleepAndLog('ろぐ');
+```
