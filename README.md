@@ -26,9 +26,9 @@ ES6の基本文法の続きを学ぶ。
 * 開発環境準備(NPM, BABEL, gulp)
 * フロントエンドでES6を使ってみる
 * ES6の基本文法の続きを試してみる
-  * Promise
   * Default Parameter
-  * Spread Parameter
+  * Rest Parameter, Spread Operator
+  * Promise
 * ES5→ES6にリファクタリングしてみよう
 
 
@@ -108,3 +108,50 @@ $ vi front/es6/index.js
 
 * `#message`の中身にテキストを入れる場合は`document.getElementById('message').textContent=hoge`
 * `front/es6/index.js`から作成された`front/es6/bundle.js`がHTMLから読み込まれる
+
+
+### ES6の基本文法の続きを試してみる
+
+#### Default Parameter
+
+
+
+#### Rest Parameter, Spread Operator
+
+ES5までは引数の個数が決まっていない場合（可変長引数）を実現するためにargumentsを使っていた。
+
+```javascript
+var hoge = function() {
+  var sum = 0;
+  for (var i = 0; i < arguments.length; i++) {
+    sum += arguments[i];
+  }
+  return sum;
+}
+
+console.log(hoge(1, 2, 3)); // 6
+```
+
+ES6からは以下のように書ける。
+
+```javascript
+let hoge = function(...arg) {
+  let sum = arg.reduce((sum, x) => sum + x);
+  return sum;
+}
+
+console.log(hoge(1, 2, 3)); // 6
+
+// または
+
+let numbers = [1, 2, 3];
+console.log(hoge(...numbers)); // 6
+```
+
+上記の`function(...arg)`のような記述をRest Parameter、`hoge(...numbers)`のような記述をSpread Operatorと呼びます。
+
+
+それでは、ES6で可変長引数の平均を計算するプログラムを作成してください。（Rest Parameter、Spread Operatorを使ってください）
+
+
+#### Promise
