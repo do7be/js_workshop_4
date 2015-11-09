@@ -114,6 +114,32 @@ $ vi front/es6/index.js
 
 #### Default Parameter
 
+ES5までは引数に値が渡されなかった場合の処理を以下のように書いていた。
+
+```javascript
+var hoge = function(num) {
+  var num = typeof num !== 'undefined' ?  num : 1;
+
+  return num * num;
+}
+
+console.log(hoge(2)); // 4
+console.log(hoge());  // 1
+```
+
+ES6からは以下のように書ける。
+
+```javascript
+var hoge = function(num = 1) {
+  return num * num;
+}
+
+console.log(hoge(2)); // 4
+console.log(hoge());  // 1
+```
+
+それでは、ES6でDefault Parameterを用いて2つの引数の和を計算するプログラムを作成してください。ただし、引数の初期値は0とします。
+
 
 
 #### Rest Parameter, Spread Operator
