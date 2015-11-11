@@ -75,7 +75,10 @@ gulpfile.jsの要所要所に下記を追記する。
 
 ```javascript
 // パッケージ宣言
-var browserify = require('browserify'),
+var gulp       = require("gulp"),
+    babel      = require("gulp-babel"),
+    plumber    = require("gulp-plumber"),
+    browserify = require('browserify'),
     babelify   = require('babelify'),
     source     = require('vinyl-source-stream');
 
@@ -89,13 +92,16 @@ gulp.task('browserify', function() {
     .pipe(gulp.dest('front/'))
 });
 
-// ファイル監視に追加
-gulp.watch('front/es6/*.js', ['browserify'])
+// ファイル監視
+gulp.task('watch', function() {
+  gulp.watch('front/es6/*.js', ['browserify'])
+});
+
+// default task
+gulp.task('default', ['babel', 'watch']);
 ```
 
-設定を変えたので、一度gulpを終了する。
-
-front/es6/export.jsをimportして、front/index.htmlの`#message`にしまむーの名前を表示させてみよう。
+front/es6/export.jsをimportして、front/index.htmlの`#message`にしまむーの名前を表示するプログラムを作成しよう。
 
 ```bash
 $ gulp watch
