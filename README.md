@@ -42,7 +42,7 @@ ES6の基本文法の続きを学ぶ。
 
 ## workshop前の基本知識
 
-* ES6の基本文法に関しては[js workshop #3](https://github.com/do7be/js_workshop_3)を参照
+* ES6の基本文法(前編)に関しては[js workshop #3](https://github.com/do7be/js_workshop_3)を参照
 
 
 ## workshop本題
@@ -55,6 +55,8 @@ ES6の基本文法の続きを学ぶ。
 $ cd ${適当なディレクトリ}
 $ git clone https://github.com/do7be/js_workshop_4.git
 $ cd js_workshop_4
+$ npm install -dev
+$ npm install -g babel
 ```
 
 ### フロントエンドでもES6を使ってみる(browserify, babelify)
