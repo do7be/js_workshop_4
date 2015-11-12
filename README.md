@@ -212,3 +212,9 @@ Logger.sleepAndLog('ろぎんぐなう！', 1000);
 Logger.count = 3;
 Logger.sleepAndLog('ろぐ');
 ```
+
+ES2015に関してより深く知りたい場合は以下のワークショッパーをやるといいかもです。
+
+https://github.com/yosuke-furukawa/tower-of-babel
+
+おわり。
