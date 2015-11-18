@@ -82,7 +82,7 @@ var gulp       = require('gulp'),
 
 // フロントエンド用トランスパイルのタスク宣言
 gulp.task('browserify', function() {
-  browserify('front/es6/*.js', { debug: true })
+  browserify('front/es6/index.js', { debug: true })
     .transform(babelify)
     .bundle()
     .on("error", function (err) { console.log("Error : " + err.message); })
