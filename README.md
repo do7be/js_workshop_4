@@ -68,7 +68,7 @@ gulpfile.jsにて同じようにトランスパイルしても、importなどは
 browserifyというパッケージを用いる。
 
 ```bash
-$ npm install --save-dev babelify browserify vinyl-source-stream
+$ npm install --save-dev babelify browserify vinyl-source-stream babel-preset-es2015
 ```
 
 下記のgulpfile.jsを作成する。
@@ -83,7 +83,7 @@ var gulp       = require('gulp'),
 // フロントエンド用トランスパイルのタスク宣言
 gulp.task('browserify', function() {
   browserify('front/es6/index.js', { debug: true })
-    .transform(babelify)
+    .transform(babelify, {presets: ['es2015']})
     .bundle()
     .on("error", function (err) { console.log("Error : " + err.message); })
     .pipe(source('bundle.js')) // この場合だと結合されてbundle.jsが出力される
