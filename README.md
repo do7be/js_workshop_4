@@ -99,7 +99,7 @@ gulp.task('watch', function() {
 gulp.task('default', ['browserify', 'watch']);
 ```
 
-front/es6/export.jsをimportして、front/index.htmlの`#message`にしまむーの名前を表示するプログラムを作成しよう。
+front/es6/export.jsをimportして、front/index.htmlの`#message`にしまむーのセリフを表示するプログラムを作成しよう。
 
 ```bash
 $ gulp watch
@@ -112,7 +112,7 @@ $ vi front/es6/index.js
 ヒント
 
 * `#message`の中身にテキストを入れる場合は`document.getElementById('message').textContent=hoge`
-* `front/es6/index.js`から作成された`front/es6/bundle.js`がHTMLから読み込まれる
+* `front/es6/index.js`から作成された`front/bundle.js`がHTMLから読み込まれる
 * importのやり方については https://github.com/do7be/js_workshop_3#module-export-import を参照。
 
 ### ES6の基本文法の続きを試してみる
