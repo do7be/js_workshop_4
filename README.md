@@ -71,7 +71,7 @@ browserifyというパッケージを用いる。
 $ npm install --save-dev babelify browserify vinyl-source-stream
 ```
 
-gulpfile.jsの要所要所に下記を追記する。
+下記のgulpfile.jsを作成する。
 
 ```javascript
 // パッケージ宣言
@@ -98,7 +98,7 @@ gulp.task('watch', function() {
 });
 
 // default task
-gulp.task('default', ['babel', 'watch']);
+gulp.task('default', ['browserify', 'watch']);
 ```
 
 front/es6/export.jsをimportして、front/index.htmlの`#message`にしまむーの名前を表示するプログラムを作成しよう。
