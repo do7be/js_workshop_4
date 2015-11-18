@@ -75,9 +75,7 @@ $ npm install --save-dev babelify browserify vinyl-source-stream
 
 ```javascript
 // パッケージ宣言
-var gulp       = require("gulp"),
-    babel      = require("gulp-babel"),
-    plumber    = require("gulp-plumber"),
+var gulp       = require('gulp'),
     browserify = require('browserify'),
     babelify   = require('babelify'),
     source     = require('vinyl-source-stream');
