@@ -117,6 +117,16 @@ $ vi front/es6/index.js
 
 ### ES6の基本文法の続きを試してみる
 
+いちいちgulpfileを書いてトランスパイルするのが面倒なので、今回からbabel-nodeを使いたいと思います。
+
+また、Babel 6.0.0からbabelというパッケージが削除され、babel-cliとbabel-coreにわかれましたのでそれぞれ対応します。
+
+```
+$ npm uninstall -g babel
+$ npm install -g babel-cli
+$ npm intall --save-dev babel-core
+```
+
 #### Default Parameter
 
 ES5までは引数に値が渡されなかった場合の処理を以下のように書いていた。
