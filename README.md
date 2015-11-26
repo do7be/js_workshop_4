@@ -56,7 +56,7 @@ $ cd ${適当なディレクトリ}
 $ git clone https://github.com/do7be/js_workshop_4.git
 $ cd js_workshop_4
 $ npm install -dev
-$ npm install -g babel
+$ npm install -g babel-cli
 ```
 
 ### フロントエンドでもES6を使ってみる(browserify, babelify)
@@ -68,7 +68,7 @@ gulpfile.jsにて同じようにトランスパイルしても、importなどは
 browserifyというパッケージを用いる。
 
 ```bash
-$ npm install --save-dev babelify browserify vinyl-source-stream babel-preset-es2015
+$ npm install --save-dev babel-core babelify browserify vinyl-source-stream babel-preset-es2015
 ```
 
 下記のgulpfile.jsを作成する。
