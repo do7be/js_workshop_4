@@ -65,7 +65,7 @@ gulpfile.jsにて同じようにトランスパイルしても、importなどは
 
 なのでトランスパイルしたJSファイルをさらにブラウザで使えるように変換する必要がある。
 
-browserifyというパッケージを用いる。
+browserifyというパッケージを用いる。これを用いてrequireが含まれるコードをコンパイルすると同じファイルに混ぜて擬似的なrequireを実現する。babelifyに関しては、babelでbrowserify対応するためのパッケージである。
 
 ```bash
 $ npm install --save-dev babel-core babelify browserify vinyl-source-stream babel-preset-es2015
